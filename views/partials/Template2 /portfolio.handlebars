@@ -1,0 +1,29 @@
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Portfolio</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        {{#if user.project}}
+        <div class="row">
+            {{#each user.project}}
+            <div class=" col-sm-12 col-md-6 col-lg-4 portfolio-item">
+                <a href="http://{{liveDemo}}" target="_blank">
+                    <div class="projects">
+                        <br>
+                        <h3 style="color: #0081AF">{{name}}</h3>
+                        <p>{{category}}</p>
+                        <a href="{{github}}">See code on Github</a>
+                    </div>
+                </a>
+            </div>
+            {{/each}} 
+        {{/if}} 
+  
+        </div>
+    </div>
+</section>
+

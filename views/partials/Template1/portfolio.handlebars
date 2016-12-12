@@ -7,73 +7,26 @@
                 <hr class="star-primary">
             </div>
         </div>
+        {{#if user.project}}
         <div class="row">
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
+            {{#each user.project}}
+            <div class=" col-sm-12 col-md-6 col-lg-4 portfolio-item">
+                <a href="http://{{liveDemo}}" target="_blank">
+                    <div class="projects">
+                        <br>
+                        <h3 style="color: orange">{{name}}</h3>
+                        <p>{{category}}</p>
+                        <a href="{{github}}">See code on Github</a>
                     </div>
-                    <img src="/img/portfolio/game.png" class="img-responsive" alt="">
                 </a>
             </div>
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="/img/portfolio/game.png" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="/img/portfolio/game.png" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="/img/portfolio/game.png" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="/img/portfolio/game.png" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 portfolio-item">
-                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="/img/portfolio/game.png" class="img-responsive" alt="">
-                </a>
-            </div>
+            {{/each}} 
+        {{/if}} 
         </div>
     </div>
 </section>
-
 <!-- Portfolio Modals -->
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+{{!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
             <div class="lr">
@@ -295,4 +248,4 @@
         </div>
     </div>
 </div>
-
+ --}}
