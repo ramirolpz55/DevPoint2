@@ -1,6 +1,6 @@
 module.exports.contactMe = function (data) {
   sails.hooks.email.send(
-    'contactMe',
+    'contact',
     data,
     {
       to: 'devpoint.tech@gmail.com',
