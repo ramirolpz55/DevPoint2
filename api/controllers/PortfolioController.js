@@ -39,8 +39,7 @@ module.exports = {
 
     },
 
-
-    //Contact Form which takes in data and sends an email to devpoint.tech@gmail.com
+    //Contact Form which takes in data and sends an email to devpoint.tech
     Contact: function (req, res) {
 
       var r = req.body;
@@ -51,9 +50,8 @@ module.exports = {
         email: r.email
       };
       console.log(data);
-      Mailer.contact(data);
+      Mailer.contactMe(data);
       res.send("Thank you for your message, I will get back to you as soon as possible");
-      //console.log("hit");
     },
 };
 
