@@ -53,6 +53,7 @@ module.exports = {
       console.log(data);
       Mailer.contact(data);
       res.send("Thank you for your message, I will get back to you as soon as possible");
+      //console.log("hit");
     },
 };
 
