@@ -36,7 +36,8 @@ module.exports.routes = {
   //   view: 'Templates/Template1/index'
   // },
 
-  'get /:username': 'PortfolioController.User'
+  'get /:username': 'PortfolioController.User',
+  'post /contact': 'PortfolioController.Contact'
 
   /***************************************************************************
   *                                                                          *

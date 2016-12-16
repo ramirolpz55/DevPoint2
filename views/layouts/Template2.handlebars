@@ -5,16 +5,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dev Point | 2</title>
+    <title>Dev Point | {{user.profile.firstName}}</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   {{!--  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> --}}
+   {{!--  <link rel="stylesheet" type="text/css" href="assets/css/style.css"> --}}
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/{{user.template}}.css">
+    <link rel="stylesheet" href="/styles/{{user.profile.template}}.css">
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -22,17 +22,17 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-{{> Template1/navigation}}
+{{> Template2/navigation}}
 {{{body}}}
-{{> Template1/footer}}
+{{> Template2/footer}}
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="assets/javascript/main.js"></script>
+{{!-- <script src="assets/javascript/main.js"></script> --}}
 </body>
 <script>
-    //console.log("{{user.firstName}}");
+    console.log("{{user.profile.template}}");
     // console.log("{{response.data}}")
 </script>
 
