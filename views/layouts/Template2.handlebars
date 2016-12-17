@@ -7,35 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dev Point | {{user.profile.firstName}}</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/style.css">-->
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <!-- Theme CSS -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!--<link href="css/freelancer.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="/styles/{{user.profile.template}}.css">
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
-{{> Template2/navigation}}
-{{{body}}}
-{{> Template2/footer}}
-
+{{> Template2/navigation}} {{{body}}} {{> Template2/footer}}
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="assets/javascript/main.js"></script>
 </body>
 <script>
-    console.log("{{user.profile.template}}");
-    // console.log("{{response.data}}")
+$(function() {
+    $('form[name=sentMessage]').submit(function() {
+        $.post($(this).attr('action'), $(this).serialize(), function(res) {
+            console.log(res.message);
+
+            $("#message-contact").text(res.message);
+            $("sentMessage") = "";
+            // location.reload();
+        });
+        return false; // prevent default action
+    });
+});
+
+//     function goBack() {
+//     window.history.back();
+// }
 </script>
 
 </html>
-
-

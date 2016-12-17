@@ -7,7 +7,7 @@
                 <hr class="star-light"> 
                     {{#if user.service}} 
                         {{#each user.service}}
-                             <div class="col-sm-12 col-lg-3 text-center" style="word-wrap: break-word;">
+                             <div class="col-sm-12 col-lg-4 text-center" style="word-wrap: break-word;">
                                 <i class="{{icon}}"></i>
                                 <p>{{name}}</p>
                                 <p>{{description}}</p>
@@ -22,3 +22,30 @@
 </section>
 
 
+{{!-- <!-- Services -->
+<section class="success" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Services</h2>
+                <hr class="star-light"> 
+            </div>
+        </div>
+                    {{#if user.service}}   
+                    <div class="row">
+                         {{#each user.service}}
+                        <div class="col-sm-12 col-md-6 col-lg-4 text-center" style="word-wrap: break-word; height: 300px; width: 300px;">
+                             <div class="services">
+                                <br>
+                                <i class="{{icon}}"></i>
+                                <p>{{name}}</p>
+                                <p>{{description}}</p>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        {{/each}} 
+                    {{/if}}
+            </div>
+    </div>
+</section> --}}
