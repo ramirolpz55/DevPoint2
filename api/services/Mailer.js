@@ -1,13 +1,13 @@
-module.exports.contactMe = function (data) {
+module.exports.contactMe = function (data, cb) {
   sails.hooks.email.send(
-    'contact',
+    'contactMe',
     data,
     {
       to: 'devpoint.tech@gmail.com',
       subject: 'New Potential Client'
     },
     function (err) {
-      console.log(err || 'Mail Sent!');
+      cb(err);
     }
   )
 };

@@ -50,8 +50,10 @@ module.exports = {
         email: r.email
       };
       console.log(data);
-      Mailer.contactMe(data);
-      res.send("Thank you for your message, I will get back to you as soon as possible");
+      Mailer.contactMe(data, function(err){
+        console.log(err || 'Mail Sent!');
+        return res.send(err || 'Mail sent');
+      });
     },
 };
 
